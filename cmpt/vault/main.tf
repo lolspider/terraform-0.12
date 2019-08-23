@@ -8,8 +8,8 @@ terraform {
   }
 }
 
-module "int_vault_secrets_under_path_docker" {
-  source = "../../../modules/vault"
+module "int_vault_secrets_under_path_docker"
+  source = "../../modules/vault"
 
   path       = "docker"
   secret_map = var.int_secret_map
@@ -19,7 +19,7 @@ module "int_vault_secrets_under_path_docker" {
 
 
 module "int_vault_secrets_under_path_grafana" {
-  source = "../../../modules/vault"
+  source = "../../modules/vault"
 
   path       = "grafana"
   secret_map = var.int_secret_map
@@ -29,7 +29,7 @@ module "int_vault_secrets_under_path_grafana" {
 
 
 module "int_vault_secrets_under_path_kibana" {
-  source = "../../../modules/vault"
+  source = "../../modules/vault"
 
   path       = "kibana"
   secret_map = var.int_secret_map
